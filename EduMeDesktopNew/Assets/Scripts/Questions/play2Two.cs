@@ -11,8 +11,34 @@ public class play2Two : MonoBehaviour
 	public Text scoreDisplay;
    public GameObject questionpanel2Two;
    public GameObject mez6;
+   public GameObject eng;
+   public GameObject sin;
+   public GameObject tam;
    public GameObject correctAnswer;
+   public GameObject hintOption;
 
+ public void Start()
+   {
+         if(DBManager.dropdownvalue2==0)
+         {
+           tam.SetActive(false);
+           sin.SetActive(false);
+           eng.SetActive(true);
+         }
+         else if(DBManager.dropdownvalue2==1)
+         {
+           tam.SetActive(false);
+           sin.SetActive(true);
+           eng.SetActive(false);
+         }
+         else if(DBManager.dropdownvalue2==2)
+         {
+           tam.SetActive(true);
+           sin.SetActive(false);
+           eng.SetActive(false);
+         }
+   }
+   
    public void jawaban(bool jawab)
    {
          feed_benar.SetActive (false);
@@ -57,6 +83,14 @@ public class play2Two : MonoBehaviour
        Destroy(correctAnswer);
      } 
 	
-   
+   public void hintOpen()
+     {
+      hintOption.SetActive (true);
+     } 
+
+      public void hintClose()
+     {
+       hintOption.SetActive (false);
+     } 
 }
 

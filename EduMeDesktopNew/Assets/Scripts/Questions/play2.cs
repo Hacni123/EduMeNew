@@ -15,6 +15,7 @@ public class play2 : MonoBehaviour
    public GameObject sin;
    public GameObject tam;
    public GameObject correctAnswer;
+   public GameObject hintOption;
 
    public void Start()
    {
@@ -85,6 +86,14 @@ public class play2 : MonoBehaviour
        Destroy(correctAnswer);
      }   
 	
-    
+    public void hintOpen()
+     {
+      hintOption.SetActive (true);
+     } 
+
+      public void hintClose()
+     {
+       hintOption.SetActive (false);
+     } 
 }
 

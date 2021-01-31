@@ -35,7 +35,7 @@ public class LoginTeacher : MonoBehaviour
         WWWForm form= new WWWForm();
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
-        WWW www= new WWW("http://localhost/gameone/loginteacher.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/loginteacher.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

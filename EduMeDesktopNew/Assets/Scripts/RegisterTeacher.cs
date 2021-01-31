@@ -29,7 +29,7 @@ public class RegisterTeacher : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
         form.AddField("classname", classnameField.text);
-        WWW www= new WWW("http://localhost/gameone/registerteacher.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/registerteacher.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

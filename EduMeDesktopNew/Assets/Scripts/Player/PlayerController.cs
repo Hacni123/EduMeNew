@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
         form.AddField("multiplication2",DBManager.multiplication2);
         form.AddField("division2",DBManager.division2);
 
-        WWW www= new WWW("http://localhost/gameone/savedata.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/savedata.php",form);
         yield return www;
         if(www.text[0]=='0')
         {
@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         form.AddField("multiplication2",DBManager.multiplication2);
         form.AddField("division2",DBManager.division2);
 
-        WWW www= new WWW("http://localhost/gameone/savedata2.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/savedata2.php",form);
         yield return www;
         if(www.text[0]=='0')
         {
@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
         form.AddField("multiplication2",DBManager.multiplication2);
         form.AddField("division2",DBManager.division2);
 
-        WWW www= new WWW("http://localhost/gameone/savedata3.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/savedata3.php",form);
         yield return www;
         if(www.text[0]=='0')
         {
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
         form.AddField("multiplication2",DBManager.multiplication2);
         form.AddField("division2",DBManager.division2);
 
-        WWW www= new WWW("http://localhost/gameone/savedata4.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/savedata4.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

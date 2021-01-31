@@ -7,7 +7,7 @@ public class LevelDetails : Details
    public Text details;
     protected string secretKey = "mySecretKey"; // Edit this value and make sure it's the same as the one stored on the server
     
-    public string leveldetails = "http://localhost/gameone/getLevelData.php";
+    public string leveldetails = "https://edumeuwu.000webhostapp.com/getLevelData.php";
 
     public override void Start()
     {

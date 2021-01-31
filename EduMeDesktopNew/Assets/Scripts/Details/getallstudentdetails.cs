@@ -45,6 +45,10 @@ public class getallstudentdetails : MonoBehaviour
     {
        StartCoroutine(StudentDetails()); 
     }
+    public void StartgetDetails2()
+    {
+       StartCoroutine(StudentDetails2()); 
+    }
 
     
     public void DeleteDetails1()
@@ -63,7 +67,126 @@ public class getallstudentdetails : MonoBehaviour
     {
         WWWForm form= new WWWForm();
         form.AddField("name", nameField.text);
-        WWW www= new WWW("http://localhost/gameone/studentDetails.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/studentDetails.php",form);
+        yield return www;
+        if(www.text[0]=='0')
+        {
+              time.text="0.00";
+              time1.text="0.00";
+              time2.text="0.00";
+              time3.text="0.00";
+             Description.text="Please wait. Data Loading...";  
+               username.text=www.text.Split('\t')[1];
+               age.text=www.text.Split('\t')[2];
+               score.text=www.text.Split('\t')[3];
+               score1.text=www.text.Split('\t')[4];
+               score2.text=www.text.Split('\t')[5];
+               score3.text=www.text.Split('\t')[6];
+               score4.text=www.text.Split('\t')[7];
+               timefirst=float.Parse(www.text.Split('\t')[8]);
+               timesecond=float.Parse(www.text.Split('\t')[9]);
+               timethird=float.Parse(www.text.Split('\t')[10]);
+               timefourth=float.Parse(www.text.Split('\t')[11]);
+               add1=int.Parse(www.text.Split('\t')[12]);
+               sub1=int.Parse(www.text.Split('\t')[13]);
+               mul1=int.Parse(www.text.Split('\t')[14]);
+               div1=int.Parse(www.text.Split('\t')[15]);
+               add2=int.Parse(www.text.Split('\t')[16]);
+               sub2=int.Parse(www.text.Split('\t')[17]);
+               mul2=int.Parse(www.text.Split('\t')[18]);
+               div2=int.Parse(www.text.Split('\t')[19]);
+               if(timefirst==0 || timesecond==0 || timethird==0 || timefourth==0)
+               {
+                   time.text="0";
+                   time1.text="0";
+                   time2.text="0";
+                   time3.text="0";
+               }
+               else
+               {
+                  time.text=(3600-timefirst).ToString("0.00");
+                  time1.text=(4200-timesecond).ToString("0.00");
+                  time2.text=(4800-timethird).ToString("0.00");
+                  time3.text=(5400-timefourth).ToString("0.00");
+               }
+
+               if(add1==0 && add2==0)
+               {
+                addition1.text="Not solve yet";
+               }
+               else{
+                  if(add1==0)
+                  {
+                    addition1.text="0 %";
+                  }
+                  else
+                  {
+                   addition1.text=add1+"/"+(add1+add2);
+                }
+               }
+
+               if(sub1==0 && sub2==0)
+               {
+               substraction1.text="Not solve yet";
+              }
+               else{
+                 if(sub1==0)
+                 {
+                      substraction1.text="0 %";
+                  }
+                 else
+                  {
+                       substraction1.text=sub1+"/"+(sub1+sub2);
+                  
+               }
+               }
+
+               if(mul1==0 && mul2==0)
+              {
+                 multiplication1.text="Not solve yet";
+              }
+              else{
+                   if(mul1==0)
+                 {
+                       multiplication1.text="0 %";
+                  }
+                  else
+                  {
+                      multiplication1.text=mul1+"/"+(mul1+mul2);
+                  
+               }
+                }
+
+                 if(div1==0 && div2==0)
+               {
+                 division1.text="Not solve yet";
+               }
+               else{
+                   if(div1==0)
+                  {
+                       division1.text="0 %";
+                  }
+                  else
+                  {
+                      division1.text=div1+"/"+(div1+div2); 
+                  
+               }
+                }   
+                   
+        }
+        else
+        {
+            Description.text="User Name is not exit";
+            Debug.Log("User login failed. Error #" + www.text);
+
+        }
+
+    }
+ public  IEnumerator StudentDetails2()
+    {
+        WWWForm form= new WWWForm();
+        form.AddField("name", DBManager.username);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/studentDetails.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

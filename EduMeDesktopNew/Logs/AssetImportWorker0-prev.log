@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home Single Language; OS build 18362.175; Version 1903; 64bit' Language: 'en' Physical Memory: 3961 MB
+OS: 'Windows 10 Home Single Language; OS build 18363.1316; Version 1909; 64bit' Language: 'en' Physical Memory: 3961 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ E:/3.1project details/EduMeDesktopNew
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-10793
+2324
 Successfully changed project path to: E:/3.1project details/EduMeDesktopNew
 E:/3.1project details/EduMeDesktopNew
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 210.41 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 313.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -30,10 +30,10 @@ Direct3D:
     Renderer: Intel(R) HD Graphics 620 (ID=0x5916)
     Vendor:   
     VRAM:     1980 MB
-    Driver:   22.20.16.4815
+    Driver:   21.20.16.4574
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56868
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56256
 Begin MonoManager ReloadAssembly

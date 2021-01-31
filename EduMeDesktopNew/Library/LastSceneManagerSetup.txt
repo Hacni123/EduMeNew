@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_scenes/Register.unity
+- path: Assets/_scenes/Logging.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

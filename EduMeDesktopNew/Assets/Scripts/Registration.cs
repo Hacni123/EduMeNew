@@ -40,7 +40,7 @@ public class Registration : MonoBehaviour
         form.AddField("myDropdown", DBManager.dropdownvalue);
         form.AddField("myDropdown2", DBManager.dropdownvalue2);
         
-        WWW www= new WWW("http://localhost/gameone/RegisterUser.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/RegisterUser.php",form);
         yield return www;
         if(www.text[0]=='0')
         {
@@ -95,7 +95,7 @@ public class Registration : MonoBehaviour
  public IEnumerator Func1()
     {
         
-        WWW hs_get = new WWW("http://localhost/gameone/dropdowndata.php");
+        WWW hs_get = new WWW("https://edumeuwu.000webhostapp.com/dropdowndata.php");
         yield return hs_get;
  
         if (hs_get.error != null)

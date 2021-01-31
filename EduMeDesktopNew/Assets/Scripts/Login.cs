@@ -28,7 +28,7 @@ public class Login : MonoBehaviour
     {
         WWWForm form= new WWWForm();
         form.AddField("name", nameField.text);
-        WWW www= new WWW("http://localhost/gameone/LoginUser.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/LoginUser.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

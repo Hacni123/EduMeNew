@@ -28,7 +28,7 @@ public class getallstudentdetailsindex : MonoBehaviour
         WWWForm form= new WWWForm();
         form.AddField("name", DBManager.username);
         form.AddField("classname", DBManager.classname);
-        WWW www= new WWW("http://localhost/gameone/getdatabyteacher.php",form);
+        WWW www= new WWW("https://edumeuwu.000webhostapp.com/getdatabyteacher.php",form);
         yield return www;
         if(www.text[0]=='0')
         {

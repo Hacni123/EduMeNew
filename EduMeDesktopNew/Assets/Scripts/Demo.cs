@@ -68,7 +68,7 @@ public class Demo : MonoBehaviour
         form.AddField("name", DBManager.username);
         form.AddField("classname", DBManager.classname);
 		
-		UnityWebRequest request = UnityWebRequest.Post("http://localhost/gameone/getdatabyteacher.php",form);
+		UnityWebRequest request = UnityWebRequest.Post("https://edumeuwu.000webhostapp.com/getdatabyteacher.php",form);
 		yield return request.SendWebRequest();
 
         if(request.isNetworkError || request.isHttpError) {

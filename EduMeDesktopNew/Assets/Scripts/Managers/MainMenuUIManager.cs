@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class MainMenuUIManager : MonoBehaviour
 {
     public GameObject settingspanel;
+    public GameObject settingspanel2;
     public GameObject highscore;
     public GameObject soundmanager;
     public GameObject exitpanel;
@@ -27,6 +28,13 @@ public class MainMenuUIManager : MonoBehaviour
         if (SoundManager.instance != null)
             SoundManager.instance.PlayButtonPressSound();
             settingspanel.SetActive(true);
+    }
+
+    public void OnClickStart2(GameObject settingspanel2)
+    {
+        if (SoundManager.instance != null)
+            SoundManager.instance.PlayButtonPressSound();
+            settingspanel2.SetActive(true);
     }
 
     public void OnClickQuit()

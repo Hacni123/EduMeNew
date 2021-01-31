@@ -7,7 +7,7 @@ public class highscore : Details
    public Text details;
     protected string secretKey = "mySecretKey"; // Edit this value and make sure it's the same as the one stored on the server
     
-    public string leveldetails = "http://localhost/gameone/getData.php";
+    public string leveldetails = "https://edumeuwu.000webhostapp.com/getData.php";
 
     public override void Start()
     {
