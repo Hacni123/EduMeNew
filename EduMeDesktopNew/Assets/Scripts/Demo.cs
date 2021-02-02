@@ -22,7 +22,7 @@ public class Demo : MonoBehaviour
 	{
 		public string username;
 		public string score;
-		public string age;
+		public string sname;
 		public Sprite Icon;
 		public string IconUrl;
 	}
@@ -48,7 +48,7 @@ public class Demo : MonoBehaviour
 			g.transform.GetChild (0).GetComponent <Image> ().sprite = allGames [i].Icon;
 			g.transform.GetChild (1).GetComponent <Text> ().text = allGames [i].username;
 			g.transform.GetChild (2).GetComponent <Text> ().text = allGames [i].score;
-			g.transform.GetChild (3).GetComponent <Text> ().text = allGames [i].age;
+			g.transform.GetChild (3).GetComponent <Text> ().text = allGames [i].sname;
 
 			g.GetComponent <Button> ().AddEventListener (i, ItemClicked);
 		}

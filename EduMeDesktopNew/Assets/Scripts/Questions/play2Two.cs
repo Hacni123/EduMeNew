@@ -59,6 +59,16 @@ public class play2Two : MonoBehaviour
                DBManager.score2=DBManager.score2+50;
 				   scoreDisplay.text="Score :" +DBManager.score2;    
 				}
+        else if(DBManager.the_level==3)
+				{
+               DBManager.score3=DBManager.score3+80;
+				   scoreDisplay.text="Score :" +DBManager.score3;    
+				}
+        else if(DBManager.the_level==4)
+				{
+               DBManager.score4=DBManager.score4+100;
+				   scoreDisplay.text="Score :" +DBManager.score4;    
+				}
             DBManager.multiplication1+=1; 
 			} else 
          {

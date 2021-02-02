@@ -9,6 +9,7 @@ public class RegisterTeacher : MonoBehaviour
     public InputField nameField;
     public InputField passwordField;
     public InputField classnameField;
+    public Dropdown myDropdown2;
     public Button submitButton;
     
     protected string name = "";
@@ -25,10 +26,12 @@ public class RegisterTeacher : MonoBehaviour
 
     public  IEnumerator Register()
     {
+        DBManager.dropdownvalue2=myDropdown2.value;
         WWWForm form= new WWWForm();
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
         form.AddField("classname", classnameField.text);
+        form.AddField("myDropdown2", DBManager.dropdownvalue2);
         WWW www= new WWW("https://edumeuwu.000webhostapp.com/registerteacher.php",form);
         yield return www;
         if(www.text[0]=='0')

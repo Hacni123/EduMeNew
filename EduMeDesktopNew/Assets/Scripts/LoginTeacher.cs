@@ -39,8 +39,9 @@ public class LoginTeacher : MonoBehaviour
         yield return www;
         if(www.text[0]=='0')
         {
-              DBManager.username=www.text.Split('\t')[1];
+              DBManager.tusername=www.text.Split('\t')[1];
               DBManager.classname=www.text.Split('\t')[2];
+              DBManager.language=www.text.Split('\t')[3];
               UnityEngine.SceneManagement.SceneManager.LoadScene(8);
         }
         else

@@ -42,6 +42,14 @@ public class PlayerController : MonoBehaviour
                 {
                    scoreDisplay.text="Score :" +DBManager.score2;  
                 }
+                else if(DBManager.the_level==3)
+                {
+                   scoreDisplay.text="Score :" +DBManager.score3;  
+                }
+                else if(DBManager.the_level==4)
+                {
+                   scoreDisplay.text="Score :" +DBManager.score4;  
+                }
          
     }
 
@@ -52,13 +60,21 @@ public class PlayerController : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
         playerDisplay.text="Player :" +DBManager.username;
-       if(DBManager.the_level==1)
+                if(DBManager.the_level==1)
                 {
                    scoreDisplay.text="Score :" +DBManager.score1;  
                 }
                 else if(DBManager.the_level==2)
                 {
                    scoreDisplay.text="Score :" +DBManager.score2;  
+                } 
+                else if(DBManager.the_level==3)
+                {
+                   scoreDisplay.text="Score :" +DBManager.score3;  
+                } 
+                else if(DBManager.the_level==4)
+                {
+                   scoreDisplay.text="Score :" +DBManager.score4;  
                 }   
     }
 

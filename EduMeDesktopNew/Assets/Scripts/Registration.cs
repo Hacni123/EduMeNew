@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Registration : MonoBehaviour
 {
     public InputField nameField;
-    public InputField age;
+    public InputField sname;
     public Dropdown myDropdown;
     public Dropdown myDropdown2;
     public Button submitButton;
@@ -32,13 +32,13 @@ public class Registration : MonoBehaviour
     public  IEnumerator Register()
     {
         
-        DBManager.dropdownvalue=myDropdown.captionText.text.ToString();
-        DBManager.dropdownvalue2=myDropdown2.value;
+       
         WWWForm form= new WWWForm();
         form.AddField("name", nameField.text);
-        form.AddField("age", age.text);
-        form.AddField("myDropdown", DBManager.dropdownvalue);
-        form.AddField("myDropdown2", DBManager.dropdownvalue2);
+        form.AddField("sname", sname.text);
+        form.AddField("classname", DBManager.classname);
+        form.AddField("language", DBManager.language);
+       
         
         WWW www= new WWW("https://edumeuwu.000webhostapp.com/RegisterUser.php",form);
         yield return www;
@@ -46,7 +46,7 @@ public class Registration : MonoBehaviour
         {
             Debug.Log("User created successfully");
             UpdateDescription("User created successfully");
-             UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+             UnityEngine.SceneManagement.SceneManager.LoadScene(0);
         }
         else
         {
@@ -57,7 +57,7 @@ public class Registration : MonoBehaviour
    public void RegisterUser()
 	{
 
-		if (nameField.text != string.Empty && age.text != string.Empty)
+		if (nameField.text != string.Empty && sname.text != string.Empty)
 		{
 			StartCoroutine(Register());	
 		}
@@ -68,11 +68,11 @@ public class Registration : MonoBehaviour
 				UpdateDescription("User Name Field is empty");
 			}
 			
-			if (age.text == string.Empty)
+			if (sname.text == string.Empty)
 			{
 				UpdateDescription("Age Field is empty");
 			}
-            if (nameField.text == string.Empty  && age.text == string.Empty)
+            if (nameField.text == string.Empty  && sname.text == string.Empty)
 			{
 				UpdateDescription("Complete all the fields above.");
 			}
@@ -112,5 +112,11 @@ public class Registration : MonoBehaviour
          }
            
         }
+    }
+
+    public void loadTeacherPanel()
+    {
+         UnityEngine.SceneManagement.SceneManager.LoadScene(8);
+    
     }
 }

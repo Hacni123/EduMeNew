@@ -5,7 +5,9 @@ using UnityEngine;
 public class DBManager : MonoBehaviour
 {
     public static string username;
+    public static string tusername;
     public static string classname;
+    public static string language;
     public static int score;
     public static int score1;
     public static int score2;
@@ -54,6 +56,8 @@ public class DBManager : MonoBehaviour
     public static int division2;
     public static string dropdownvalue;
     public static int dropdownvalue2;
+     
+
     public static bool LoggedIn{ get { return username != null; }}
 
     public static void LogOut()

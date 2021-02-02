@@ -111,5 +111,11 @@ public class MainMenuUIManager : MonoBehaviour
          UnityEngine.SceneManagement.SceneManager.LoadScene(9);
     
     }
+     public void registerPlayer()
+    {
+         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    
+    }
+    
     
 }
